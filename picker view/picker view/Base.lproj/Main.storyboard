@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="picker_view" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bj9-Ec-lna">
+                                <rect key="frame" x="0.0" y="748" width="414" height="71"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4b6-HB-XaI">
+                                <rect key="frame" x="0.0" y="167" width="414" height="363"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16529733599999999" green="0.90074728670000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bj9-Ec-lna" secondAttribute="bottom" constant="43" id="1fi-cb-F2S"/>
+                            <constraint firstItem="Bj9-Ec-lna" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8Qe-Vm-xdI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bj9-Ec-lna" secondAttribute="trailing" id="AYJ-JQ-SmS"/>
+                            <constraint firstItem="Bj9-Ec-lna" firstAttribute="top" secondItem="4b6-HB-XaI" secondAttribute="bottom" constant="289" id="Moe-SZ-emR"/>
+                            <constraint firstItem="4b6-HB-XaI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N7T-xw-2AN"/>
+                            <constraint firstItem="4b6-HB-XaI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gxy-XV-lfx"/>
+                            <constraint firstItem="4b6-HB-XaI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-99.5" id="w8c-x7-XbO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="Bj9-Ec-lna" id="ErG-ZM-BUF"/>
+                        <outlet property="pickerView" destination="4b6-HB-XaI" id="ZbM-N6-oB6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+</document>

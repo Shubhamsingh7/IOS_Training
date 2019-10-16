@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Apple_Map_kit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zui-dB-FMM" customClass="MKMapView">
+                                <rect key="frame" x="0.0" y="22" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FA7-hs-cKH" userLabel="gpsButton">
+                                <rect key="frame" x="330" y="678" width="70" height="70"/>
+                                <color key="backgroundColor" red="0.36313959559999998" green="0.60192310110000002" blue="0.66505393400000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="0Jv-oY-f0C"/>
+                                    <constraint firstAttribute="height" constant="70" id="r8E-zV-a7a"/>
+                                </constraints>
+                                <state key="normal" image="gps"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="gpsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pAg-Hw-gd2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mis-Bn-BxL">
+                                <rect key="frame" x="330" y="768" width="70" height="70"/>
+                                <color key="backgroundColor" red="0.36313959563311188" green="0.60192310106619595" blue="0.66505393401015223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Jad-sG-WnE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" image="direction" backgroundImage="direction"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="directionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9cH-yz-VVV"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="SB9-8K-VpV">
+                                <rect key="frame" x="10" y="94" width="394" height="112"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hyy-5g-ptD" userLabel="Search">
+                                        <rect key="frame" x="10" y="0.0" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="0dO-m6-f1P"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter destination " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pf2-ZT-6qR" userLabel="Search">
+                                        <rect key="frame" x="10" y="61" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="l77-Pb-hwZ"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LgC-w3-YIc">
+                                        <rect key="frame" x="155" y="72" width="84" height="40"/>
+                                        <color key="backgroundColor" red="0.1238540222" green="0.39008117549999999" blue="0.40067814089999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" title="Search">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="searchTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pqf-qE-jTc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="pf2-ZT-6qR" firstAttribute="leading" secondItem="SB9-8K-VpV" secondAttribute="leading" constant="10" id="3dN-qd-XFR"/>
+                                    <constraint firstItem="hyy-5g-ptD" firstAttribute="leading" secondItem="SB9-8K-VpV" secondAttribute="leading" constant="10" id="Jhc-hk-6uN"/>
+                                    <constraint firstAttribute="trailing" secondItem="hyy-5g-ptD" secondAttribute="trailing" constant="10" id="Kyd-B5-XRS"/>
+                                    <constraint firstItem="LgC-w3-YIc" firstAttribute="leading" secondItem="SB9-8K-VpV" secondAttribute="leading" constant="155" id="Pgo-ls-YJ8"/>
+                                    <constraint firstAttribute="trailing" secondItem="pf2-ZT-6qR" secondAttribute="trailing" constant="10" id="lOW-au-YYl"/>
+                                    <constraint firstAttribute="trailing" secondItem="LgC-w3-YIc" secondAttribute="trailing" constant="155" id="twy-gP-6dI"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Mis-Bn-BxL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="330" id="0Aa-3j-jCX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Mis-Bn-BxL" secondAttribute="bottom" constant="24" id="3ne-GE-N9v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mis-Bn-BxL" secondAttribute="trailing" constant="14" id="FTD-80-ATp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SB9-8K-VpV" secondAttribute="trailing" constant="10" id="G0W-FB-Ssx"/>
+                            <constraint firstItem="SB9-8K-VpV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="HeU-hn-uND"/>
+                            <constraint firstItem="SB9-8K-VpV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="T6z-q9-T2G"/>
+                            <constraint firstItem="Mis-Bn-BxL" firstAttribute="top" secondItem="FA7-hs-cKH" secondAttribute="bottom" constant="20" id="XJZ-pT-zP9"/>
+                            <constraint firstItem="FA7-hs-cKH" firstAttribute="leading" secondItem="Mis-Bn-BxL" secondAttribute="leading" id="ggB-dh-xdE"/>
+                            <constraint firstItem="FA7-hs-cKH" firstAttribute="trailing" secondItem="Mis-Bn-BxL" secondAttribute="trailing" id="kA5-nJ-O2a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="destinationTextFiled" destination="pf2-ZT-6qR" id="12s-po-Qn6"/>
+                        <outlet property="mapView" destination="Zui-dB-FMM" id="5FB-Jt-SGb"/>
+                        <outlet property="seachTextField" destination="hyy-5g-ptD" id="gGh-ez-naO"/>
+                        <outlet property="seacrchButton" destination="LgC-w3-YIc" id="7SJ-Ba-6gA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.681159420289859" y="18.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="direction" width="36" height="36"/>
+        <image name="gps" width="36" height="36"/>
+    </resources>
+</document>
